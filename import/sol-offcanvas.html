@@ -181,15 +181,19 @@
 <!-- ========================= -->
 
 <style>
-.link-ok {
-  color: #198754 !important;
+.link-ok{
+  color:#198754 !important;
 }
 
-.link-broken {
-  color: #dc3545 !important;
-  text-decoration: line-through;
-  pointer-events: none;
-  opacity: 0.5;
+.link-broken{
+  color:#dc3545 !important;
+  opacity:0.45 !important;
+  pointer-events:none !important;
+  cursor:not-allowed !important;
+}
+
+.link-checking{
+  opacity:0.7;
 }
 </style>
 
@@ -198,38 +202,96 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const links = document.querySelectorAll(".offcanvas-body a[href]");
 
-  const checkLink = async (link) => {
+  async function checkLink(link){
+
     const url = link.href;
 
-    try {
-      await fetch(url, {
+    link.classList.add("link-checking");
+
+    try{
+
+      const response = await fetch(url, {
         method: "GET",
-        mode: "no-cors"
+        cache: "no-cache"
       });
 
-      // If no error → assume OK
-      link.classList.add("link-ok");
+      let broken = false;
 
-    } catch (e) {
-      markBroken(link);
+      /* HTTP STATUS CHECK */
+
+      if(!response.ok){
+        broken = true;
+      }
+
+      /* GITHUB PAGES 404 DETECTION */
+
+      const html = await response.text();
+
+      if(
+        html.includes("404") ||
+        html.includes("Page not found") ||
+        html.includes("Not Found")
+      ){
+        broken = true;
+      }
+
+      if(broken){
+
+        markBroken(link, response.status);
+
+      }else{
+
+        markValid(link);
+
+      }
+
+    }catch(error){
+
+      markBroken(link, "Network");
+
     }
-  };
 
-  const markBroken = (link) => {
+    link.classList.remove("link-checking");
+
+  }
+
+  function markBroken(link, code){
+
+    link.classList.remove("link-ok");
+
     link.classList.add("link-broken");
-    link.title = "Broken or unreachable link";
-  };
 
-  const runValidation = async () => {
-    const tasks = [];
+    link.removeAttribute("href");
+
+    link.title = `Broken Link (${code})`;
+
+  }
+
+  function markValid(link){
+
+    link.classList.remove("link-broken");
+
+    link.classList.add("link-ok");
+
+    link.title = "Valid Link";
+
+  }
+
+  async function runValidation(){
+
+    const jobs = [];
 
     links.forEach(link => {
-      tasks.push(checkLink(link));
+      jobs.push(checkLink(link));
     });
 
-    await Promise.all(tasks);
-  };
+    await Promise.all(jobs);
+
+    console.log("All links checked.");
+
+  }
 
   runValidation();
+
 });
 </script>
