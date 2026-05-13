@@ -1,227 +1,240 @@
 <div class="card border-0 shadow-sm rounded-4">
 
-    <div class="card-body p-4">
-
-        <h3 class="fw-bold text-primary mb-4">
-
-            <i class="fas fa-globe me-2"></i>
-            GLOBAL META AYARLARI
-
-        </h3>
-
-        <!-- SITE NAME -->
-        <div class="mb-4">
-
-            <label class="form-label fw-bold">
-                Site Adı
-            </label>
-
-            <input type="text"
-                   id="g_site"
-                   class="form-control form-control-lg"
-                   placeholder="Site adını giriniz..."
-                   value="Okan Kaplan Akademi">
-
-            <div class="form-text">
-                Navbar ve title alanında kullanılır.
-            </div>
-
-        </div>
-
-        <!-- AUTHOR -->
-        <div class="mb-4">
-
-            <label class="form-label fw-bold">
-                Author
-            </label>
-
-            <input type="text"
-                   id="g_author"
-                   class="form-control form-control-lg"
-                   placeholder="Yazar adı..."
-                   value="Okan Kaplan">
-
-            <div class="form-text">
-                Meta author etiketi için kullanılır.
-            </div>
-
-        </div>
-
-        <!-- BASE URL -->
-        <div class="mb-4">
-
-            <label class="form-label fw-bold">
-                Base URL
-            </label>
-
-            <input type="url"
-                   id="g_base"
-                   class="form-control form-control-lg"
-                   placeholder="https://webdesktools.github.io/"
-                   value="https://webdesktools.github.io/">
-
-            <div class="form-text">
-                Canonical URL oluşturmak için kullanılır.
-            </div>
-
-        </div>
-
-        <!-- FAVICON -->
-        <div class="mb-4">
-
-            <label class="form-label fw-bold">
-                Favicon URL
-            </label>
-
-            <input type="url"
-                   id="g_favicon"
-                   class="form-control form-control-lg"
-                   placeholder="https://webdesktools.github.io//favicon.png">
-
-            <div class="form-text">
-                Site favicon adresi.
-            </div>
-
-        </div>
-
-        <!-- LANGUAGE -->
-        <div class="mb-4">
-
-            <label class="form-label fw-bold">
-                Site Dili
-            </label>
-
-            <select id="g_lang"
-                    class="form-select form-select-lg">
-
-                <option value="tr" selected>
-                    Türkçe
-                </option>
-
-                <option value="en">
-                    English
-                </option>
-
-                <option value="de">
-                    Deutsch
-                </option>
-
-                <option value="fr">
-                    Français
-                </option>
-
-            </select>
-
-        </div>
-
-        <!-- ROBOTS -->
-        <div class="mb-4">
-
-            <label class="form-label fw-bold">
-                Robots Meta
-            </label>
-
-            <select id="g_robots"
-                    class="form-select form-select-lg">
-
-                <option value="index,follow" selected>
-                    index, follow
-                </option>
-
-                <option value="noindex,nofollow">
-                    noindex, nofollow
-                </option>
-
-                <option value="index,nofollow">
-                    index, nofollow
-                </option>
-
-                <option value="noindex,follow">
-                    noindex, follow
-                </option>
-
-            </select>
-
-        </div>
-
-        <!-- SOCIAL -->
-        <div class="row">
-
-            <div class="col-md-6 mb-4">
-
-                <label class="form-label fw-bold">
-                    Facebook URL
-                </label>
-
-                <input type="url"
-                       id="g_facebook"
-                       class="form-control"
-                       placeholder="https://facebook.com/...">
-
-            </div>
-
-            <div class="col-md-6 mb-4">
-
-                <label class="form-label fw-bold">
-                    Instagram URL
-                </label>
-
-                <input type="url"
-                       id="g_instagram"
-                       class="form-control"
-                       placeholder="https://instagram.com/...">
-
-            </div>
-
-            <div class="col-md-6 mb-4">
-
-                <label class="form-label fw-bold">
-                    YouTube URL
-                </label>
-
-                <input type="url"
-                       id="g_youtube"
-                       class="form-control"
-                       placeholder="https://youtube.com/...">
-
-            </div>
-
-            <div class="col-md-6 mb-4">
-
-                <label class="form-label fw-bold">
-                    X / Twitter URL
-                </label>
-
-                <input type="url"
-                       id="g_twitter"
-                       class="form-control"
-                       placeholder="https://x.com/...">
-
-            </div>
-
-        </div>
-
-        <!-- SEO -->
-        <div class="alert alert-primary rounded-4 border-0 mt-4">
-
-            <div class="fw-bold mb-2">
-                <i class="fas fa-circle-info me-2"></i>
-                SEO Bilgisi
-            </div>
-
-            <div class="small">
-
-                Bu alanlar otomatik olarak:
-                title,
-                canonical,
-                meta author,
-                robots
-                ve sosyal medya meta verilerini oluşturmak için kullanılacaktır.
-
-            </div>
-
-        </div>
+  <div class="card-body p-4">
+
+    <h3 class="fw-bold text-primary mb-4">
+      <i class="fas fa-globe me-2"></i>
+      GLOBAL SEO SETTINGS
+    </h3>
+
+    <!-- SITE NAME -->
+    <div class="mb-4">
+
+      <label class="form-label fw-bold">
+        Site Name
+      </label>
+
+      <input type="text"
+             id="g_site"
+             class="form-control form-control-lg"
+             placeholder="Enter site name..."
+             value="Okan Kaplan Academy">
+
+      <div class="form-text">
+        Used in navbar and page title.
+      </div>
 
     </div>
+
+    <!-- AUTHOR -->
+    <div class="mb-4">
+
+      <label class="form-label fw-bold">
+        Author
+      </label>
+
+      <input type="text"
+             id="g_author"
+             class="form-control form-control-lg"
+             value="Okan Kaplan">
+
+      <div class="form-text">
+        Used for meta author tag.
+      </div>
+
+    </div>
+
+    <!-- BASE URL -->
+    <div class="mb-4">
+
+      <label class="form-label fw-bold">
+        Base URL
+      </label>
+
+      <input type="url"
+             id="g_base"
+             class="form-control form-control-lg"
+             value="https://webdesktools.github.io/">
+
+      <div class="form-text">
+        Used for canonical URLs.
+      </div>
+
+    </div>
+
+    <!-- FAVICON -->
+    <div class="mb-4">
+
+      <label class="form-label fw-bold">
+        Favicon URL
+      </label>
+
+      <input type="url"
+             id="g_favicon"
+             class="form-control form-control-lg"
+             placeholder="https://webdesktools.github.io/favicon.png">
+
+    </div>
+
+    <!-- LANGUAGE (FORCED ENGLISH ONLY) -->
+    <div class="mb-4">
+
+      <label class="form-label fw-bold">
+        Language
+      </label>
+
+      <select id="g_lang" class="form-select form-select-lg">
+
+        <option value="en" selected>
+          English
+        </option>
+
+      </select>
+
+    </div>
+
+    <!-- ROBOTS -->
+    <div class="mb-4">
+
+      <label class="form-label fw-bold">
+        Robots Meta
+      </label>
+
+      <select id="g_robots" class="form-select form-select-lg">
+
+        <option value="index,follow" selected>
+          index, follow
+        </option>
+
+        <option value="noindex,nofollow">
+          noindex, nofollow
+        </option>
+
+      </select>
+
+    </div>
+
+    <!-- SOCIAL LINKS -->
+    <div class="row">
+
+      <div class="col-md-6 mb-3">
+
+        <label class="form-label fw-bold">Facebook</label>
+        <input type="url" class="form-control" placeholder="https://facebook.com/">
+
+      </div>
+
+      <div class="col-md-6 mb-3">
+
+        <label class="form-label fw-bold">Instagram</label>
+        <input type="url" class="form-control" placeholder="https://instagram.com/">
+
+      </div>
+
+      <div class="col-md-6 mb-3">
+
+        <label class="form-label fw-bold">YouTube</label>
+        <input type="url"
+               class="form-control"
+               value="https://www.youtube.com/@KişiselGelişim-Video-Pdf-img">
+
+      </div>
+
+      <div class="col-md-6 mb-3">
+
+        <label class="form-label fw-bold">X (Twitter)</label>
+        <input type="url" class="form-control" placeholder="https://x.com/">
+
+      </div>
+
+    </div>
+
+    <!-- INFO -->
+    <div class="alert alert-primary rounded-4 border-0 mt-4">
+
+      <strong>SEO Automation Info</strong><br>
+      These settings automatically generate:
+      title, canonical, meta author, robots, and social tags.
+
+    </div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="d-flex flex-wrap gap-2 mt-3">
+
+      <a href="https://www.youtube.com/@KişiselGelişim-Video-Pdf-img" target="_blank" class="text-danger">
+        <i class="fab fa-youtube fa-lg"></i>
+      </a>
+
+      <a href="https://www.udemy.com/user/okan-kaplan-7" target="_blank" class="text-dark">
+        <i class="fas fa-graduation-cap fa-lg"></i>
+      </a>
+
+      <a href="https://shopier.com/banddes" target="_blank" class="text-success">
+        <i class="fas fa-store fa-lg"></i>
+      </a>
+
+      <a href="https://linkedin.com/in/canvasor" target="_blank" class="text-primary">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+
+      <a href="https://kisisel-gelisim-video-pdfders-imgpack.blogspot.com" target="_blank" class="text-warning">
+        <i class="fab fa-blogger fa-lg"></i>
+      </a>
+
+      <a href="https://www.etsy.com/shop/bandanee" target="_blank" class="text-info">
+        <i class="fab fa-etsy fa-lg"></i>
+      </a>
+
+      <a href="https://dev.to/okan_kaplan_livehtml" target="_blank" class="text-dark">
+        <i class="fab fa-dev fa-lg"></i>
+      </a>
+
+      <a href="https://sketchfab.com/canvasor" target="_blank" class="text-secondary">
+        <i class="fas fa-cube fa-lg"></i>
+      </a>
+
+      <a href="https://codepen.io/livehtml" target="_blank" class="text-black">
+        <i class="fab fa-codepen fa-lg"></i>
+      </a>
+
+      <a href="https://www.tiktok.com/@canvasornet" target="_blank" class="text-danger">
+        <i class="fab fa-tiktok fa-lg"></i>
+      </a>
+
+      <a href="https://vimeo.com/canvasor" target="_blank" class="text-primary">
+        <i class="fab fa-vimeo fa-lg"></i>
+      </a>
+
+      <a href="https://www.patreon.com/c/livehtml" target="_blank" class="text-warning">
+        <i class="fab fa-patreon fa-lg"></i>
+      </a>
+
+      <a href="https://medium.com/@livehtml" target="_blank" class="text-dark">
+        <i class="fab fa-medium fa-lg"></i>
+      </a>
+
+      <a href="https://wordpress.com/" target="_blank" class="text-info">
+        <i class="fab fa-wordpress fa-lg"></i>
+      </a>
+
+      <a href="https://hashnode.com/@bandanee" target="_blank" class="text-primary">
+        <i class="fas fa-hashtag fa-lg"></i>
+      </a>
+
+      <a href="https://creativemarket.com/users/okankaplan1" target="_blank" class="text-success">
+        <i class="fas fa-palette fa-lg"></i>
+      </a>
+
+      <a href="https://gitlab.com/bandanee/" target="_blank" class="text-danger">
+        <i class="fab fa-gitlab fa-lg"></i>
+      </a>
+
+      <a href="https://www.behance.net/okankaplan1" target="_blank" class="text-primary">
+        <i class="fab fa-behance fa-lg"></i>
+      </a>
+
+    </div>
+
+  </div>
 
 </div>
