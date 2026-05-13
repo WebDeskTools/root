@@ -1,260 +1,215 @@
 <div class="card border-0 shadow-sm rounded-4">
 
-    <div class="card-body p-4">
+  <div class="card-body p-4">
 
-        <h3 class="fw-bold text-danger mb-4">
+    <h3 class="fw-bold text-danger mb-4">
+      <i class="fas fa-pen-ruler me-2"></i>
+      QUILL CONTENT EDITOR
+    </h3>
 
-            <i class="fas fa-pen-ruler me-2"></i>
-            QUILL EDITOR
+    <!-- INFO -->
+    <div class="alert alert-light border rounded-4 mb-4">
 
-        </h3>
+      <div class="fw-bold mb-2">
+        <i class="fas fa-wand-magic-sparkles me-2 text-primary"></i>
+        Content Editor
+      </div>
 
-        <!-- TOOLBAR INFO -->
-        <div class="alert alert-light border rounded-4 mb-4">
+      <div class="small text-muted">
+        Create structured content including headings, paragraphs, lists, code blocks, links, and media elements.
+      </div>
 
-            <div class="fw-bold mb-2">
-                <i class="fas fa-wand-magic-sparkles me-2 text-primary"></i>
-                İçerik Editörü
+    </div>
+
+    <!-- EDITOR -->
+    <div class="mb-4">
+
+      <label class="form-label fw-bold">
+        Content Area
+      </label>
+
+      <div id="editor"
+           style="height:400px;background:#fff;">
+
+        <h2>Hello World</h2>
+
+        <p>
+          Content editor is ready.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- IMAGE UPLOAD -->
+    <div class="card border rounded-4 mb-4">
+
+      <div class="card-body">
+
+        <h5 class="fw-bold mb-3 text-primary">
+          <i class="fas fa-image me-2"></i>
+          Image Upload
+        </h5>
+
+        <div class="mb-3">
+
+          <label class="form-label fw-bold">
+            Select Image
+          </label>
+
+          <input type="file"
+                 id="imgInput"
+                 class="form-control"
+                 accept="image/*">
+
+          <div class="form-text">
+            Supported formats: JPG, PNG, WEBP
+          </div>
+
+        </div>
+
+        <!-- PREVIEW -->
+        <div class="preview-img-container">
+
+          <div class="mb-3">
+
+            <label class="form-label fw-bold">
+              Image Preview
+            </label>
+
+            <img id="preCrop"
+                 class="img-fluid rounded shadow-sm">
+
+          </div>
+
+          <button type="button"
+                  class="btn btn-success px-4"
+                  id="btnCrop">
+
+            <i class="fas fa-crop-simple me-2"></i>
+            Crop and Insert into Editor
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- OPTIONS -->
+    <div class="row">
+
+      <!-- AUTOSAVE -->
+      <div class="col-md-6 mb-4">
+
+        <div class="card border rounded-4 h-100">
+
+          <div class="card-body">
+
+            <h5 class="fw-bold text-primary mb-3">
+              <i class="fas fa-floppy-disk me-2"></i>
+              Auto Save
+            </h5>
+
+            <div class="form-check form-switch">
+
+              <input class="form-check-input"
+                     type="checkbox"
+                     id="editor_autosave"
+                     checked>
+
+              <label class="form-check-label"
+                     for="editor_autosave">
+
+                Enable automatic content saving
+
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- STATS -->
+      <div class="col-md-6 mb-4">
+
+        <div class="card border rounded-4 h-100">
+
+          <div class="card-body">
+
+            <h5 class="fw-bold text-success mb-3">
+              <i class="fas fa-chart-column me-2"></i>
+              Content Statistics
+            </h5>
+
+            <div class="small text-muted mb-2">
+              Characters:
+              <span id="charCount" class="fw-bold text-dark">0</span>
             </div>
 
             <div class="small text-muted">
-
-                Başlık, paragraf, liste, kod bloğu,
-                bağlantı ve görsel içerikleri oluşturabilirsiniz.
-
+              Words:
+              <span id="wordCount" class="fw-bold text-dark">0</span>
             </div>
+
+          </div>
 
         </div>
 
-        <!-- QUILL EDITOR -->
-        <div class="mb-4">
-
-            <label class="form-label fw-bold">
-                İçerik Alanı
-            </label>
-
-            <div id="editor"
-                 style="height:400px;background:#fff;">
-
-                <h2>Merhaba Dünya</h2>
-
-                <p>
-                    İçerik editörü hazır.
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- IMAGE UPLOAD -->
-        <div class="card border rounded-4 mb-4">
-
-            <div class="card-body">
-
-                <h5 class="fw-bold mb-3 text-primary">
-
-                    <i class="fas fa-image me-2"></i>
-                    Görsel Yükleme
-
-                </h5>
-
-                <div class="mb-3">
-
-                    <label class="form-label fw-bold">
-                        Görsel Seç
-                    </label>
-
-                    <input type="file"
-                           id="imgInput"
-                           class="form-control"
-                           accept="image/*">
-
-                    <div class="form-text">
-                        JPG, PNG, WEBP desteklenir.
-                    </div>
-
-                </div>
-
-                <!-- PREVIEW -->
-                <div class="preview-img-container">
-
-                    <div class="mb-3">
-
-                        <label class="form-label fw-bold">
-                            Görsel Önizleme
-                        </label>
-
-                        <img id="preCrop"
-                             class="img-fluid rounded shadow-sm">
-
-                    </div>
-
-                    <button type="button"
-                            class="btn btn-success px-4"
-                            id="btnCrop">
-
-                        <i class="fas fa-crop-simple me-2"></i>
-                        Kırp ve Editöre Ekle
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- CONTENT OPTIONS -->
-        <div class="row">
-
-            <!-- AUTOSAVE -->
-            <div class="col-md-6 mb-4">
-
-                <div class="card border rounded-4 h-100">
-
-                    <div class="card-body">
-
-                        <h5 class="fw-bold text-primary mb-3">
-
-                            <i class="fas fa-floppy-disk me-2"></i>
-                            Otomatik Kayıt
-
-                        </h5>
-
-                        <div class="form-check form-switch">
-
-                            <input class="form-check-input"
-                                   type="checkbox"
-                                   id="editor_autosave"
-                                   checked>
-
-                            <label class="form-check-label"
-                                   for="editor_autosave">
-
-                                İçerik otomatik kaydedilsin
-
-                            </label>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- WORD COUNT -->
-            <div class="col-md-6 mb-4">
-
-                <div class="card border rounded-4 h-100">
-
-                    <div class="card-body">
-
-                        <h5 class="fw-bold text-success mb-3">
-
-                            <i class="fas fa-chart-column me-2"></i>
-                            İçerik İstatistikleri
-
-                        </h5>
-
-                        <div class="small text-muted mb-2">
-                            Karakter Sayısı:
-                            <span id="charCount"
-                                  class="fw-bold text-dark">
-                                0
-                            </span>
-                        </div>
-
-                        <div class="small text-muted">
-                            Kelime Sayısı:
-                            <span id="wordCount"
-                                  class="fw-bold text-dark">
-                                0
-                            </span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- SHORTCODES -->
-        <div class="card border rounded-4">
-
-            <div class="card-body">
-
-                <h5 class="fw-bold text-warning mb-3">
-
-                    <i class="fas fa-code me-2"></i>
-                    Hızlı Shortcode Alanı
-
-                </h5>
-
-                <div class="row g-2">
-
-                    <div class="col-md-3">
-
-                        <button type="button"
-                                class="btn btn-outline-primary w-100 shortcode-btn"
-                                data-code="<hr>">
-
-                            HR
-
-                        </button>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                        <button type="button"
-                                class="btn btn-outline-success w-100 shortcode-btn"
-                                data-code="<blockquote></blockquote>">
-
-                            Blockquote
-
-                        </button>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                        <button type="button"
-                                class="btn btn-outline-danger w-100 shortcode-btn"
-                                data-code="<pre><code></code></pre>">
-
-                            Code
-
-                        </button>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                        <button type="button"
-                                class="btn btn-outline-dark w-100 shortcode-btn"
-                                data-code="<div class='alert alert-primary'></div>">
-
-                            Alert
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-                <div class="form-text mt-3">
-
-                    Seçilen shortcode editör içerisine eklenir.
-
-                </div>
-
-            </div>
-
-        </div>
+      </div>
 
     </div>
+
+    <!-- SHORTCODES -->
+    <div class="card border rounded-4">
+
+      <div class="card-body">
+
+        <h5 class="fw-bold text-warning mb-3">
+          <i class="fas fa-code me-2"></i>
+          Quick Shortcodes
+        </h5>
+
+        <div class="row g-2">
+
+          <div class="col-md-3">
+            <button type="button" class="btn btn-outline-primary w-100 shortcode-btn" data-code="<hr>">
+              HR
+            </button>
+          </div>
+
+          <div class="col-md-3">
+            <button type="button" class="btn btn-outline-success w-100 shortcode-btn" data-code="<blockquote></blockquote>">
+              Blockquote
+            </button>
+          </div>
+
+          <div class="col-md-3">
+            <button type="button" class="btn btn-outline-danger w-100 shortcode-btn" data-code="<pre><code></code></pre>">
+              Code
+            </button>
+          </div>
+
+          <div class="col-md-3">
+            <button type="button" class="btn btn-outline-dark w-100 shortcode-btn" data-code="<div class='alert alert-primary'></div>">
+              Alert
+            </button>
+          </div>
+
+        </div>
+
+        <div class="form-text mt-3">
+          Selected shortcode will be inserted into the editor.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
