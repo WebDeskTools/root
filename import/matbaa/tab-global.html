@@ -1,0 +1,227 @@
+<div class="card border-0 shadow-sm rounded-4">
+
+    <div class="card-body p-4">
+
+        <h3 class="fw-bold text-primary mb-4">
+
+            <i class="fas fa-globe me-2"></i>
+            GLOBAL META AYARLARI
+
+        </h3>
+
+        <!-- SITE NAME -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Site Adı
+            </label>
+
+            <input type="text"
+                   id="g_site"
+                   class="form-control form-control-lg"
+                   placeholder="Site adını giriniz..."
+                   value="Okan Kaplan Akademi">
+
+            <div class="form-text">
+                Navbar ve title alanında kullanılır.
+            </div>
+
+        </div>
+
+        <!-- AUTHOR -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Author
+            </label>
+
+            <input type="text"
+                   id="g_author"
+                   class="form-control form-control-lg"
+                   placeholder="Yazar adı..."
+                   value="Okan Kaplan">
+
+            <div class="form-text">
+                Meta author etiketi için kullanılır.
+            </div>
+
+        </div>
+
+        <!-- BASE URL -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Base URL
+            </label>
+
+            <input type="url"
+                   id="g_base"
+                   class="form-control form-control-lg"
+                   placeholder="https://example.com/"
+                   value="https://example.com/">
+
+            <div class="form-text">
+                Canonical URL oluşturmak için kullanılır.
+            </div>
+
+        </div>
+
+        <!-- FAVICON -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Favicon URL
+            </label>
+
+            <input type="url"
+                   id="g_favicon"
+                   class="form-control form-control-lg"
+                   placeholder="https://example.com/favicon.png">
+
+            <div class="form-text">
+                Site favicon adresi.
+            </div>
+
+        </div>
+
+        <!-- LANGUAGE -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Site Dili
+            </label>
+
+            <select id="g_lang"
+                    class="form-select form-select-lg">
+
+                <option value="tr" selected>
+                    Türkçe
+                </option>
+
+                <option value="en">
+                    English
+                </option>
+
+                <option value="de">
+                    Deutsch
+                </option>
+
+                <option value="fr">
+                    Français
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- ROBOTS -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Robots Meta
+            </label>
+
+            <select id="g_robots"
+                    class="form-select form-select-lg">
+
+                <option value="index,follow" selected>
+                    index, follow
+                </option>
+
+                <option value="noindex,nofollow">
+                    noindex, nofollow
+                </option>
+
+                <option value="index,nofollow">
+                    index, nofollow
+                </option>
+
+                <option value="noindex,follow">
+                    noindex, follow
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="row">
+
+            <div class="col-md-6 mb-4">
+
+                <label class="form-label fw-bold">
+                    Facebook URL
+                </label>
+
+                <input type="url"
+                       id="g_facebook"
+                       class="form-control"
+                       placeholder="https://facebook.com/...">
+
+            </div>
+
+            <div class="col-md-6 mb-4">
+
+                <label class="form-label fw-bold">
+                    Instagram URL
+                </label>
+
+                <input type="url"
+                       id="g_instagram"
+                       class="form-control"
+                       placeholder="https://instagram.com/...">
+
+            </div>
+
+            <div class="col-md-6 mb-4">
+
+                <label class="form-label fw-bold">
+                    YouTube URL
+                </label>
+
+                <input type="url"
+                       id="g_youtube"
+                       class="form-control"
+                       placeholder="https://youtube.com/...">
+
+            </div>
+
+            <div class="col-md-6 mb-4">
+
+                <label class="form-label fw-bold">
+                    X / Twitter URL
+                </label>
+
+                <input type="url"
+                       id="g_twitter"
+                       class="form-control"
+                       placeholder="https://x.com/...">
+
+            </div>
+
+        </div>
+
+        <!-- SEO -->
+        <div class="alert alert-primary rounded-4 border-0 mt-4">
+
+            <div class="fw-bold mb-2">
+                <i class="fas fa-circle-info me-2"></i>
+                SEO Bilgisi
+            </div>
+
+            <div class="small">
+
+                Bu alanlar otomatik olarak:
+                title,
+                canonical,
+                meta author,
+                robots
+                ve sosyal medya meta verilerini oluşturmak için kullanılacaktır.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

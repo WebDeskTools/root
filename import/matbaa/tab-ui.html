@@ -1,0 +1,350 @@
+<div class="card border-0 shadow-sm rounded-4">
+
+    <div class="card-body p-4">
+
+        <h3 class="fw-bold text-info mb-4">
+
+            <i class="fas fa-palette me-2"></i>
+            GLOBAL UI AYARLARI
+
+        </h3>
+
+        <!-- THEME -->
+        <div class="card border rounded-4 mb-4">
+
+            <div class="card-body">
+
+                <h5 class="fw-bold text-primary mb-4">
+
+                    <i class="fas fa-brush me-2"></i>
+                    Tema Ayarları
+
+                </h5>
+
+                <div class="row">
+
+                    <!-- PRIMARY COLOR -->
+                    <div class="col-md-4 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Ana Renk
+                        </label>
+
+                        <input type="color"
+                               id="ui_color"
+                               class="form-control form-control-color w-100"
+                               value="#0d6efd">
+
+                        <div class="form-text">
+                            Navbar ve buton rengi.
+                        </div>
+
+                    </div>
+
+                    <!-- BG COLOR -->
+                    <div class="col-md-4 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Arkaplan Rengi
+                        </label>
+
+                        <input type="color"
+                               id="ui_bg"
+                               class="form-control form-control-color w-100"
+                               value="#f8f9fa">
+
+                    </div>
+
+                    <!-- TEXT COLOR -->
+                    <div class="col-md-4 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Yazı Rengi
+                        </label>
+
+                        <input type="color"
+                               id="ui_text"
+                               class="form-control form-control-color w-100"
+                               value="#212529">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- LAYOUT -->
+        <div class="card border rounded-4 mb-4">
+
+            <div class="card-body">
+
+                <h5 class="fw-bold text-success mb-4">
+
+                    <i class="fas fa-object-group me-2"></i>
+                    Layout Ayarları
+
+                </h5>
+
+                <div class="row">
+
+                    <!-- WIDTH -->
+                    <div class="col-md-4 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Max Width
+                        </label>
+
+                        <input type="number"
+                               id="ui_width"
+                               class="form-control"
+                               value="1100">
+
+                        <div class="form-text">
+                            İçerik maksimum genişliği.
+                        </div>
+
+                    </div>
+
+                    <!-- RADIUS -->
+                    <div class="col-md-4 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Border Radius
+                        </label>
+
+                        <input type="number"
+                               id="ui_radius"
+                               class="form-control"
+                               value="14">
+
+                    </div>
+
+                    <!-- SHADOW -->
+                    <div class="col-md-4 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Shadow Gücü
+                        </label>
+
+                        <select id="ui_shadow"
+                                class="form-select">
+
+                            <option value="sm">
+                                Small
+                            </option>
+
+                            <option value="md"
+                                    selected>
+                                Medium
+                            </option>
+
+                            <option value="lg">
+                                Large
+                            </option>
+
+                            <option value="none">
+                                None
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TYPOGRAPHY -->
+        <div class="card border rounded-4 mb-4">
+
+            <div class="card-body">
+
+                <h5 class="fw-bold text-danger mb-4">
+
+                    <i class="fas fa-font me-2"></i>
+                    Typography
+
+                </h5>
+
+                <div class="row">
+
+                    <!-- FONT -->
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Font Family
+                        </label>
+
+                        <select id="ui_font"
+                                class="form-select">
+
+                            <option value="'Segoe UI',sans-serif">
+                                Segoe UI
+                            </option>
+
+                            <option value="'Poppins',sans-serif">
+                                Poppins
+                            </option>
+
+                            <option value="'Roboto',sans-serif">
+                                Roboto
+                            </option>
+
+                            <option value="'Arial',sans-serif">
+                                Arial
+                            </option>
+
+                            <option value="'Trebuchet MS',sans-serif">
+                                Trebuchet MS
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- FONT SIZE -->
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Base Font Size
+                        </label>
+
+                        <input type="number"
+                               id="ui_font_size"
+                               class="form-control"
+                               value="16">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- NAVBAR -->
+        <div class="card border rounded-4 mb-4">
+
+            <div class="card-body">
+
+                <h5 class="fw-bold text-warning mb-4">
+
+                    <i class="fas fa-bars me-2"></i>
+                    Navbar Ayarları
+
+                </h5>
+
+                <div class="row">
+
+                    <!-- NAVBAR STYLE -->
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Navbar Tema
+                        </label>
+
+                        <select id="ui_navbar_theme"
+                                class="form-select">
+
+                            <option value="dark"
+                                    selected>
+                                Dark
+                            </option>
+
+                            <option value="light">
+                                Light
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- FIXED -->
+                    <div class="col-md-6 mb-4">
+
+                        <label class="form-label fw-bold d-block">
+                            Navbar Sabit
+                        </label>
+
+                        <div class="form-check form-switch mt-2">
+
+                            <input class="form-check-input"
+                                   type="checkbox"
+                                   id="ui_navbar_fixed"
+                                   checked>
+
+                            <label class="form-check-label"
+                                   for="ui_navbar_fixed">
+
+                                Fixed Top Navbar
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CUSTOM CSS -->
+        <div class="card border rounded-4 mb-4">
+
+            <div class="card-body">
+
+                <h5 class="fw-bold text-secondary mb-4">
+
+                    <i class="fas fa-code me-2"></i>
+                    Custom CSS
+
+                </h5>
+
+                <textarea id="ui_custom_css"
+                          class="form-control"
+                          rows="8"
+                          placeholder="Özel CSS kodları buraya..."></textarea>
+
+                <div class="form-text mt-2">
+
+                    Sayfaya ekstra CSS eklemek için kullanılır.
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- INFO -->
+        <div class="alert alert-info border-0 rounded-4">
+
+            <div class="fw-bold mb-2">
+
+                <i class="fas fa-circle-info me-2"></i>
+                UI Sistemi
+
+            </div>
+
+            <div class="small">
+
+                Bu ayarlar oluşturulan HTML sayfasının:
+                renk,
+                font,
+                genişlik,
+                navbar,
+                typography
+                ve genel görünümünü otomatik olarak yönetir.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

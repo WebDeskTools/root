@@ -1,0 +1,240 @@
+<div class="card border-0 shadow-sm rounded-4">
+
+    <div class="card-body p-4">
+
+        <h3 class="fw-bold text-success mb-4">
+
+            <i class="fas fa-file-lines me-2"></i>
+            LOCAL META AYARLARI
+
+        </h3>
+
+        <!-- PAGE TITLE -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Sayfa Başlığı
+            </label>
+
+            <input type="text"
+                   id="l_title"
+                   class="form-control form-control-lg"
+                   placeholder="Makale başlığı..."
+                   value="Yeni Makale">
+
+            <div class="form-text">
+                Browser title ve H1 alanında kullanılır.
+            </div>
+
+        </div>
+
+        <!-- PAGE DESCRIPTION -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Sayfa Açıklaması
+            </label>
+
+            <textarea id="l_desc"
+                      class="form-control"
+                      rows="5"
+                      placeholder="SEO açıklaması yazınız...">Bu sayfa için açıklama alanı.</textarea>
+
+            <div class="form-text">
+                Meta description etiketi için kullanılır.
+            </div>
+
+        </div>
+
+        <!-- PAGE PATH -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Sayfa Path
+            </label>
+
+            <input type="text"
+                   id="l_path"
+                   class="form-control"
+                   placeholder="blog/yeni-yazi.html"
+                   value="blog/yeni-yazi.html">
+
+            <div class="form-text">
+                Canonical URL oluşturmak için kullanılır.
+            </div>
+
+        </div>
+
+        <!-- YOUTUBE -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                YouTube Video ID
+            </label>
+
+            <input type="text"
+                   id="l_yt"
+                   class="form-control"
+                   placeholder="dQw4w9WgXcQ">
+
+            <div class="form-text">
+                Video otomatik embed edilir.
+            </div>
+
+        </div>
+
+        <!-- FEATURED IMAGE -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Öne Çıkan Görsel URL
+            </label>
+
+            <input type="url"
+                   id="l_cover"
+                   class="form-control"
+                   placeholder="https://example.com/cover.jpg">
+
+            <div class="form-text">
+                Open Graph ve sosyal medya paylaşımı için kullanılır.
+            </div>
+
+        </div>
+
+        <!-- CATEGORY -->
+        <div class="row">
+
+            <div class="col-md-6 mb-4">
+
+                <label class="form-label fw-bold">
+                    Kategori
+                </label>
+
+                <select id="l_category"
+                        class="form-select">
+
+                    <option value="Genel">
+                        Genel
+                    </option>
+
+                    <option value="Web Tasarım">
+                        Web Tasarım
+                    </option>
+
+                    <option value="JavaScript">
+                        JavaScript
+                    </option>
+
+                    <option value="SEO">
+                        SEO
+                    </option>
+
+                    <option value="Frontend">
+                        Frontend
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="col-md-6 mb-4">
+
+                <label class="form-label fw-bold">
+                    Yayın Tarihi
+                </label>
+
+                <input type="date"
+                       id="l_date"
+                       class="form-control">
+
+            </div>
+
+        </div>
+
+        <!-- TAGS -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Etiketler
+            </label>
+
+            <input type="text"
+                   id="l_tags"
+                   class="form-control"
+                   placeholder="html, css, javascript">
+
+            <div class="form-text">
+                Virgül ile ayırarak yazınız.
+            </div>
+
+        </div>
+
+        <!-- AUTHOR -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                İçerik Yazarı
+            </label>
+
+            <input type="text"
+                   id="l_author"
+                   class="form-control"
+                   placeholder="Yazar adı"
+                   value="Okan Kaplan">
+
+        </div>
+
+        <!-- STATUS -->
+        <div class="mb-4">
+
+            <label class="form-label fw-bold">
+                Sayfa Durumu
+            </label>
+
+            <select id="l_status"
+                    class="form-select">
+
+                <option value="publish">
+                    Yayında
+                </option>
+
+                <option value="draft">
+                    Taslak
+                </option>
+
+                <option value="private">
+                    Gizli
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- INFO -->
+        <div class="alert alert-success border-0 rounded-4 mt-4">
+
+            <div class="fw-bold mb-2">
+
+                <i class="fas fa-circle-info me-2"></i>
+                Local Meta Bilgisi
+
+            </div>
+
+            <div class="small">
+
+                Bu alanlar:
+                SEO,
+                Open Graph,
+                sayfa başlığı,
+                video embed,
+                kategori,
+                etiket
+                ve yayın bilgileri için kullanılacaktır.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
