@@ -1,67 +1,151 @@
-<div class="offcanvas-header">
+
+<div class="offcanvas-header border-bottom">
   <h5 class="offcanvas-title" id="offcanvasLeftLabel">Kategoriler</h5>
   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
 </div>
-<div class="offcanvas-body">
-  <ul class="nav flex-column">
 
-   <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/DailyMind/">DailyMind</a></li>
+<div class="offcanvas-body p-0">
+  <div class="accordion accordion-flush" id="accordionMenu">
     
+    <!-- Sabit Link: DailyMind -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <a href="https://bandanee.github.io/DailyMind/" class="nav-link py-3 px-4 border-bottom">DailyMind</a>
+      </h2>
+    </div>
+
     <!-- Dijital İçerik Üretimi -->
-    <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/">Dijital İçerik Üretimi</a></li>
-    <ul class="nav flex-column ms-3 mb-2">
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/blog/">Blog ve Makaleler</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/seo/">SEO Uyumlu İçerik</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/sosyal-medya/">Sosyal Medya İçerikleri</a></li>
-    </ul>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          Dijital İçerik Üretimi
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+        <div class="accordion-body p-0">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/dijital-icerik/">Genel Bakış</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/dijital-icerik/blog/">Blog ve Makaleler</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/dijital-icerik/seo/">SEO Uyumlu İçerik</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2" href="https://bandanee.github.io/okankaplan/dijital-icerik/sosyal-medya/">Sosyal Medya İçerikleri</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- Eğitim ve Kurslar -->
-    <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/">Eğitim ve Kurslar</a></li>
-    <ul class="nav flex-column ms-3 mb-2">
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/online-kurslar/">Online Kurslar</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/workshop/">Workshop & Webinar</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/egitim-materyalleri/">PDF & Sunumlar</a></li>
-    </ul>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+          Eğitim ve Kurslar
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+        <div class="accordion-body p-0">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/kurslar/">Genel Bakış</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/kurslar/online-kurslar/">Online Kurslar</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/kurslar/workshop/">Workshop & Webinar</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2" href="https://bandanee.github.io/okankaplan/kurslar/egitim-materyalleri/">PDF & Sunumlar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- Web Hizmetleri -->
-    <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/">Web Hizmetleri</a></li>
-    <ul class="nav flex-column ms-3 mb-2">
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/tasarim/">Web Tasarımı</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/gelistirme/">Web Geliştirme</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/ui-ux/">UI/UX Tasarımı</a></li>
-    </ul>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+          Web Hizmetleri
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+        <div class="accordion-body p-0">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/web/">Genel Bakış</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/web/tasarim/">Web Tasarımı</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/web/gelistirme/">Web Geliştirme</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2" href="https://bandanee.github.io/okankaplan/web/ui-ux/">UI/UX Tasarımı</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- 3D ve Animasyon -->
-    <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/">3D ve Animasyon</a></li>
-    <ul class="nav flex-column ms-3 mb-2">
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/modelleme/">3D Modelleme</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/animasyon/">Animasyon & Motion Graphics</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/sanal-urun/">Sanal Ürün ve Sahne</a></li>
-    </ul>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+          3D ve Animasyon
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+        <div class="accordion-body p-0">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/3d/">Genel Bakış</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/3d/modelleme/">3D Modelleme</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/3d/animasyon/">Animasyon & Motion Graphics</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2" href="https://bandanee.github.io/okankaplan/3d/sanal-urun/">Sanal Ürün ve Sahne</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- Ses ve Müzik -->
-    <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/">Ses ve Müzik</a></li>
-    <ul class="nav flex-column ms-3 mb-2">
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/podcast/">Podcast ve Sesli İçerik</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/jingle/">Jingle ve Arka Plan Müziği</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/duzenleme/">Ses Düzenleme & Mastering</a></li>
-    </ul>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+          Ses ve Müzik
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+        <div class="accordion-body p-0">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/ses/">Genel Bakış</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/ses/podcast/">Podcast ve Sesli İçerik</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/ses/jingle/">Jingle ve Arka Plan Müziği</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2" href="https://bandanee.github.io/okankaplan/ses/duzenleme/">Ses Düzenleme & Mastering</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- Video Prodüksiyon -->
-    <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/">Video Prodüksiyon</a></li>
-    <ul class="nav flex-column ms-3 mb-2">
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/kurgu/">Kurgu & Montaj</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/tanitim/">Tanıtım ve Eğitim Videoları</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/animasyon/">Video Animasyon</a></li>
-    </ul>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSix">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+          Video Prodüksiyon
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+        <div class="accordion-body p-0">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/video/">Genel Bakış</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/video/kurgu/">Kurgu & Montaj</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/video/tanitim/">Tanıtım ve Eğitim Videoları</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2" href="https://bandanee.github.io/okankaplan/video/animasyon/">Video Animasyon</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <!-- Grafik ve Görsel Tasarım -->
-    <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/">Grafik ve Görsel Tasarım</a></li>
-    <ul class="nav flex-column ms-3 mb-2">
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/logo/">Logo & Kurumsal Kimlik</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/sosyal-medya/">Sosyal Medya Görselleri</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/brosur/">Broşür & PDF Tasarımı</a></li>
-    </ul>
+    <!-- Grafik Tasarım -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSeven">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+          Grafik Tasarım
+        </button>
+      </h2>
+      <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+        <div class="accordion-body p-0">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/grafik/">Genel Bakış</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/grafik/logo/">Logo & Kurumsal Kimlik</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2 border-bottom" href="https://bandanee.github.io/okankaplan/grafik/sosyal-medya/">Sosyal Medya Görselleri</a></li>
+            <li class="nav-item"><a class="nav-link ps-4 py-2" href="https://bandanee.github.io/okankaplan/grafik/brosur/">Broşür & PDF Tasarımı</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-  </ul>
+  </div>
 </div>
