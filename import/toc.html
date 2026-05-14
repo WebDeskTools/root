@@ -18,20 +18,30 @@
 <form id="contactForm">
 
   <div class="mb-3">
-    <label for="nameInput" class="form-label">İsim</label>
-    <input type="text" class="form-control" id="nameInput" placeholder="Adınızı girin" required>
+    <label for="nameInput" class="form-label">Name</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="nameInput" 
+      placeholder="Enter your name" 
+      required>
   </div>
 
   <div class="mb-3">
-    <label for="messageInput" class="form-label">Mesaj</label>
-    <textarea class="form-control" id="messageInput" rows="3" placeholder="Mesajınızı yazın" required></textarea>
+    <label for="messageInput" class="form-label">Message</label>
+    <textarea 
+      class="form-control" 
+      id="messageInput" 
+      rows="3" 
+      placeholder="Write your message" 
+      required></textarea>
   </div>
 
   <button 
     type="submit" 
     class="btn btn-success w-100"
     aria-label="Send message via WhatsApp">
-    WhatsApp ile Gönder
+    Send via WhatsApp
   </button>
 
 </form>
@@ -43,19 +53,18 @@
     const name = document.getElementById('nameInput').value.trim();
     const message = document.getElementById('messageInput').value.trim();
 
-    if(name === '' || message === '') {
-      alert('Lütfen tüm alanları doldurun!');
+    if (name === '' || message === '') {
+      alert('Please fill in all fields!');
       return;
     }
 
     const phone = '905362279390';
-    const text = encodeURIComponent(`İsim: ${name}\nMesaj: ${message}`);
+    const text = encodeURIComponent(`Name: ${name}\nMessage: ${message}`);
     const url = `https://wa.me/${phone}?text=${text}`;
 
     window.open(url, '_blank');
   });
 </script>
-
 <div class="mt-4"> 
   <h6>Sosyal ve Platformlar</h6> 
 
