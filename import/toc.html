@@ -5,9 +5,8 @@
     type="button" 
     class="btn-close text-reset" 
     data-bs-dismiss="offcanvas" 
-    aria-label="Close">
+    aria-label="Close contact panel">
   </button>
-
 </div>
 
 <div class="offcanvas-body">
@@ -18,30 +17,35 @@
 <form id="contactForm">
 
   <div class="mb-3">
-    <label for="nameInput" class="form-label">Name</label>
+    <label for="nameInput" class="form-label">İsim</label>
     <input 
       type="text" 
       class="form-control" 
       id="nameInput" 
-      placeholder="Enter your name" 
-      required>
+      placeholder="Adınızı girin" 
+      required
+      maxlength="50"
+      autocomplete="name">
   </div>
 
   <div class="mb-3">
-    <label for="messageInput" class="form-label">Message</label>
+    <label for="messageInput" class="form-label">Mesaj</label>
     <textarea 
       class="form-control" 
       id="messageInput" 
       rows="3" 
-      placeholder="Write your message" 
-      required></textarea>
+      placeholder="Mesajınızı yazın" 
+      required
+      maxlength="500"
+      autocomplete="off"></textarea>
   </div>
 
   <button 
     type="submit" 
     class="btn btn-success w-100"
-    aria-label="Send message via WhatsApp">
-    Send via WhatsApp
+    aria-label="Send message via WhatsApp"
+    id="sendBtn">
+    WhatsApp ile Gönder
   </button>
 
 </form>
@@ -52,19 +56,42 @@
 
     const name = document.getElementById('nameInput').value.trim();
     const message = document.getElementById('messageInput').value.trim();
+    const btn = document.getElementById('sendBtn');
 
-    if (name === '' || message === '') {
-      alert('Please fill in all fields!');
+    // validation
+    if (!name || !message) {
+      alert('Lütfen tüm alanları doldurun!');
       return;
     }
 
+    if (name.length > 50 || message.length > 500) {
+      alert('Mesaj çok uzun!');
+      return;
+    }
+
+    // basic sanitization
+    const safeName = name.replace(/[<>]/g, '');
+    const safeMessage = message.replace(/[<>]/g, '');
+
+    // UX loading state
+    btn.disabled = true;
+    btn.innerText = 'Gönderiliyor...';
+
     const phone = '905362279390';
-    const text = encodeURIComponent(`Name: ${name}\nMessage: ${message}`);
+    const text = encodeURIComponent(`İsim: ${safeName}\nMesaj: ${safeMessage}`);
     const url = `https://wa.me/${phone}?text=${text}`;
 
     window.open(url, '_blank');
+
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerText = 'WhatsApp ile Gönder';
+    }, 1500);
+
+    this.reset();
   });
 </script>
+
 <div class="mt-4"> 
   <h6>Sosyal ve Platformlar</h6> 
 
@@ -101,7 +128,7 @@
     <a href="https://kisisel-gelisim-video-pdfders-imgpack.blogspot.com" 
        target="_blank" 
        class="text-warning"
-       aria-label="Blogger Site">
+       aria-label="Blog Site">
       <i class="fab fa-blogger fa-lg"></i>
     </a>
 
