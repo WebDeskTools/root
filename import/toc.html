@@ -50,42 +50,49 @@
 </form>
 
 <script>
-// Dinleyiciyi doküman seviyesinde tanımlıyoruz
 document.addEventListener('submit', function(e) {
-  // Sadece ID'si contactForm olan form gönderildiğinde çalış
-  if (e.target && e.target.id === 'contactForm') {
+  const targetForm = e.target;
+
+  if (targetForm && targetForm.id === 'contactForm') {
     e.preventDefault();
 
-    const nameInput = document.getElementById('nameInput');
-    const messageInput = document.getElementById('messageInput');
-    const btn = document.getElementById('sendBtn');
+    const nameInput = targetForm.querySelector('#nameInput');
+    const messageInput = targetForm.querySelector('#messageInput');
+    const btn = targetForm.querySelector('#sendBtn');
 
-    if (!nameInput || !messageInput) return;
+    if (!nameInput || !messageInput || !btn) return;
 
     const name = nameInput.value.trim();
     const message = messageInput.value.trim();
 
-    if (!name || !message) return;
-    if (name.length > 50 || message.length > 500) return;
+    // English validation check
+    if (!name || !message) {
+        alert("Please fill in all fields.");
+        return;
+    }
 
+    // Update button status
+    btn.disabled = true;
+    const originalText = btn.innerText;
+    btn.innerText = 'Redirecting...';
+
+    // Data sanitization
     const safeName = name.replace(/[<>]/g, '');
     const safeMessage = message.replace(/[<>]/g, '');
-
-    btn.disabled = true;
-    btn.innerText = 'Sending...';
-
     const phone = '905362279390';
+    
+    // English Message Template
     const text = encodeURIComponent(`Name: ${safeName}\nMessage: ${safeMessage}`);
     const url = `https://wa.me/${phone}?text=${text}`;
-
+    
     window.open(url, '_blank', 'noopener,noreferrer');
 
+    // Reset form and button
     setTimeout(() => {
       btn.disabled = false;
-      btn.innerText = 'WhatsApp Send';
-    }, 1200);
-
-    e.target.reset(); // Formu sıfırla
+      btn.innerText = originalText;
+      targetForm.reset();
+    }, 2000);
   }
 });
 </script>
